@@ -29,7 +29,5 @@ RUN echo "upload_max_filesize = 2000M" >> /etc/php5/upload_large_dumps.ini \
 # expose only nginx HTTP port
 EXPOSE 80
 
-ADD freetds.conf /etc/freetds/freetds.conf
-
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
