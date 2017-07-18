@@ -27,7 +27,7 @@ RUN echo "upload_max_filesize = 2000M" >> /etc/php5/upload_large_dumps.ini \
  && ln -s ../../upload_large_dumps.ini /etc/php5/cli/conf.d
 
 # expose only nginx HTTP port
-EXPOSE 23023 
+EXPOSE 22022 
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
